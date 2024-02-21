@@ -70,6 +70,8 @@ dn_ak <- dennys %>%
 nrow(dn_ak)
 ```
 
+***There are 3***
+
 2.  Filter the La Quinta dataframe for Alaska (AK) and save the result as `lq_ak`. How many La Quinta locations are there in Alaska?
 
 ```{r}
@@ -77,6 +79,8 @@ lq_ak <- laquinta %>%
   filter(state == "AK")
 nrow(lq_ak)
 ```
+
+***There are 2***
 
 Next we'll calculate the distance between all Denny's and all La Quinta locations in Alaska.
 Let's take this step by step:
@@ -144,6 +148,15 @@ dn_lq_ak
 These varibles are renamed to include `.x` and `.y` because the two data frames have the same variables and it's not possible to have two variables in a data frame with the exact same name.
 
 Now that we have the data in the format we wanted, all that is left is to calculate the distances between the pairs.
+
+```{r}
+dn_lq_ak %>%
+  nrow()
+dn_lq_ak %>%
+  names()
+```
+
+***There are `r nrow(dn_lq_ak)` observations. 
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
